@@ -7,7 +7,7 @@ module ActionView
     
       def stylesheet_link_tag(*sources)
         options = sources.extract_options!.stringify_keys
-        options[:media] = 'print' if options[:media].blank?
+        options[:media] = 'print' if options["media"].blank?
         old_stylesheet_link_tag(sources, options)
       end
       
